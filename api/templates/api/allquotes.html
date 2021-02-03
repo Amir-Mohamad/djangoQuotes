@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>DigitalOcean Droplets</title>
-    <link crossorigin="anonymous"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
-          integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4="
-          rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/png" href="https://assets.digitalocean.com/logos/favicon.png"/>
+    <title>Programming Quotes</title>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+        integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
 </head>
+
 <body>
-<nav aria-label="main navigation" class="navbar is-light" role="navigation">
-    <div class="navbar-brand">
-        <div class="navbar-item">
-            <img atl="DigitalOcean" src="https://assets.digitalocean.com/logos/DO_Logo_icon_blue.png"
-                 style="margin-right: 0.5em;">Droplets
-        </div>
-    </div>
-</nav>
-
-
-<table class="table is-fullwidth is-striped is-bordered">
-    <thead>
-    <tr>
-        <th>Author</th>
-        <th>Quote</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for quote in quotes %}
-    <tr>
-        <th>{{ quote.name }}</th>
-        <td>{{ quote.author }}</td>
-        <td>{{ quote.id }}</td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+    <table class="table is-fullwidth is-striped is-bordered">
+        <thead>
+            <tr>
+                <th><h1>Author</h1></th>
+                <th><h1>Quote</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quote in quotes %}
+            <tr>
+                <td><h3>{{ quote.author }}</h3></td>
+                <th>{{ quote.quote }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
+
 </html>
