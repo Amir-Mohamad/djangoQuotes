@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.views.generics import TemplateView
+from django.views.generic import TemplateView
+from .scripts import get_quotes
 
 
-class AllQoutes(TemplateView):
+class AllQuotes(TemplateView):
     template_name = 'api/allquotes.html'
     def get_context_data(self, *args, **kwargs):
-        pass
+        context = {
+            'quotes' : get_quotes(),
+        }
+        return context

@@ -5,7 +5,5 @@ def get_quotes():
     url = 'http://quotes.stormconsultancy.co.uk/quotes.json'
     r = requests.get(url)
     quotes = r.json()
-    quotes_list = []
-    for i in range(len(quotes['quotes'])):
-        quotes_list.append(quotes['quotes'][i])
+    quotes_list = [i for i in quotes]
     return quotes_list
