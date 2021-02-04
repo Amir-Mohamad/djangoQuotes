@@ -1,3 +1,6 @@
+# Quotes
+### You can see some usefull programming quotes using this project 
+
 # Installing dependencies
 install dependencies using:
 ```sh
